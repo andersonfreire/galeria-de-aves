@@ -1,0 +1,171 @@
+:root {
+  /* Cores da natureza */
+  --theme-dark-green: #4a531f;
+  --theme-ochre: #e3971e;
+  --theme-brown: #5c2c1a;
+  --theme-orange: #e06f3e;
+  --theme-red: #db483b;
+  
+  --theme-background: #fdfaf6;
+  --theme-text: #333;
+
+  /* "verde lodo" para o cabeçalho */
+  --theme-mud-green: #6B8E23;
+}
+
+body {
+  background-color: var(--theme-background);
+  color: var(--theme-text);
+}
+
+/* NavBar e CSS customizado */
+.navbar {
+  background-color: var(--theme-dark-green) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1.15rem
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Seção Hero-Banner */
+.hero-banner {
+  background-color: var(--theme-mud-green); 
+  border-bottom: 5px solid var(--theme-dark-green);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 0.5rem 0 !important; /* Ajuste de padding */
+}
+
+.hero-banner h1, .hero-banner p {
+  color: #fff;
+}
+
+.hero-banner h1 {
+  font-weight: 700;
+}
+
+/* Estilo para o mapa */
+.mapa-serido {
+  max-width: 60%;
+  height: auto;
+  margin: 20px auto 0 auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização customizada do Card */
+.card {
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper para a imagem do card */
+.card-img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+  
+  /* Adiciona um fundo para o "letterbox" */
+  background-color: #f0f0f0; 
+}
+
+/* Imagem do card */
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  object-position: center;
+}
+
+.card-title {
+  color: var(--theme-dark-green);
+  font-weight: 600;
+}
+
+.card-subtitle {
+  color: var(--theme-brown);
+}
+
+/* Formulário de Adição */
+#item-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Centralizar spinner e adicionar cor */
+#loading-spinner {
+  width: auto;
+  height: auto;
+  color: var(--theme-brown);
+}
+
+/* Cor para "Nenhuma ave encontrada" */
+.empty-gallery-message {
+  color: var(--theme-brown);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Aplicando a paleta aos botões */
+.btn-primary {
+  background-color: var(--theme-ochre);
+  border-color: var(--theme-ochre);
+}
+.btn-primary:hover {
+  background-color: #c9861a;
+  border-color: #c9861a;
+}
+.btn-warning {
+  background-color: var(--theme-orange);
+  border-color: var(--theme-orange);
+}
+.btn-warning:hover {
+  background-color: #c76136;
+  border-color: #c76136;
+}
+
+.btn-danger {
+  background-color: var(--theme-red);
+  border-color: var(--theme-red);
+}
+.btn-danger:hover {
+  background-color: #c13f32;
+  border-color: #c13f32;
+}
+
+#filter-buttons .btn-primary {
+  background-color: var(--theme-orange);
+  border-color: var(--theme-orange);
+}
+#filter-buttons .btn-outline-primary {
+  color: var(--theme-orange);
+  border-color: var(--theme-orange);
+}
+#filter-buttons .btn-outline-primary:hover {
+  background-color: var(--theme-orange);
+  color: #fff;
+}
+
+footer {
+  background-color: var(--theme-brown);
+  color: #fff;
+}

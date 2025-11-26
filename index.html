@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Aves - Seridó Potiguar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">🦅 Catálogo by Anderson Freire</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#galeria">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#adicionar">Adicionar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-banner p-3 mb-4 rounded-3">
+    <div class="container-fluid py-4">
+      
+      <div class="row align-items-center">
+        
+        <div class="col-md-5 text-center">
+          <img src="img/serido.png" alt="Mapa da Região do Seridó Potiguar" class="img-fluid mapa-serido mt-4 mt-md-0">
+        </div>
+
+        <div class="col-md-7 text-center text-md-start">
+          <h1 class="display-4 fw-bold">Galeria Pessoal</h1>
+          <p class="fs-4">Catalogando as Aves da Região do Seridó Potiguar</p>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    
+    <section id="adicionar" class="mb-5">
+      <h2 class="text-center mb-4" id="form-title">Adicionar Ave</h2>
+      <form id="item-form">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="titulo" class="form-label">Título (Nome Popular)</label>
+            <input type="text" class="form-control" id="titulo" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="nomeCientifico" class="form-label">Nome Científico</label>
+            <input type="text" class="form-control" id="nomeCientifico" required>
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="descricao" class="form-label">Descrição</label>
+          <textarea class="form-control" id="descricao" rows="3" required></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="categoria" class="form-label">Categoria</label>
+            <select class="form-select" id="categoria" required>
+              <option value="" disabled selected>Selecione uma categoria...</option>
+              <option value="Residente">Residente</option>
+              <option value="Migratória">Migratória</option>
+              <option value="Urbana">Urbana</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="habitat" class="form-label">Habitat Principal</label>
+            <input type="text" class="form-control" id="habitat" placeholder="Ex: Caatinga, Açude, Zona Urbana" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="imagem" class="form-label">URL da Imagem</label>
+          <input type="url" class="form-control" id="imagem" required>
+        </div>
+
+        <button type="submit" id="form-submit-btn" class="btn btn-primary">Adicionar Item</button>
+        <button type="reset" id="form-cancel-btn" class="btn btn-secondary">Cancelar Edição</button>
+      </form>
+
+      <div id="feedback-message" class="mt-3"></div>
+    </section>
+    
+    <hr class="my-5">
+
+    <section id="galeria">
+      <h2 class="text-center mb-4">Galeria de Aves</h2>
+
+      <div id="filter-buttons" class="text-center mb-4">
+        <button class="btn btn-primary" data-categoria="Todos">Todos</button>
+        <button class="btn btn-outline-primary" data-categoria="Residente">Residentes</button>
+        <button class="btn btn-outline-primary" data-categoria="Migratória">Migratórias</button>
+        <button class="btn btn-outline-primary" data-categoria="Urbana">Urbanas</button>
+      </div>
+      
+      <div id="item-grid" class="row">
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 mt-5 text-center">
+    <p class="mb-0">&copy; 2025 - Galeria de Aves do Seridó Potiguar - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
